@@ -10,7 +10,7 @@ import {
 	Toolbar,
 	Typography,
 } from "@mui/material";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../store/store";
 import { setDarkMode } from "./uiSlice";
 
@@ -66,7 +66,7 @@ export default function NavBar() {
 				</List>
 
 				<Box display="flex" alignItems="center">
-					<IconButton size="large" sx={{ color: "inherit" }}>
+					<IconButton component={Link} to="/basket" size="large" sx={{ color: "inherit" }}>
 						<Badge badgeContent="4" color="secondary">
 							<ShoppingCart />
 						</Badge>
